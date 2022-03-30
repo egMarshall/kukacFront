@@ -19,4 +19,5 @@ export const Input = styled.input`
 
 export const Button = styled.button`
     margin-left: 10px;
+    cursor: pointer;
 `
