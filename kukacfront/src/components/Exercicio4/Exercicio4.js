@@ -26,25 +26,33 @@ const Exercicio4 = () => {
         axios.post("https://teste-kukac-trainee-back.herokuapp.com/challenge/confere-cep", body)
         .then(res => {
             setResults(res.data.response)
-            // cleanFields()
+            cleanFields()
         })        
         .catch(error => {
-            console.log(error.message)
+            alert(error.response.data.message)
+            cleanFields()
         })
 
     }
 
     const AllAdresses = 
         results && results.map((address) => {
-            return (
-                <div>
-                    <p>CEP: {address.cep}</p>
-                    <p>Logradouro: {address.logradouro}</p>
-                    <p>Bairro: {address.bairro}</p>
-                    <p>Cidade: {address.localidade}</p>
-                    <p>Estado: {address.estado}</p>
-                </div>
-            )
+            if (address.erro) {
+                return (
+                    <p>Cep Inválido!</p>
+                )
+            } else {
+                return (
+                    <div>
+                        <p>CEP: {address.cep}</p>
+                        <p>Logradouro: {address.logradouro}</p>
+                        <p>Bairro: {address.bairro}</p>
+                        <p>Cidade: {address.localidade}</p>
+                        <p>Estado: {address.estado}</p>
+                    </div>
+                )
+            }
+            
         })
 
 

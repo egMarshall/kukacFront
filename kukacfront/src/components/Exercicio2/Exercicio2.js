@@ -28,7 +28,8 @@ const Exercicio2 = () => {
             cleanFields()
         })
         .catch(error => {
-            console.log(error.message)
+            alert(error.response.data.message)
+            cleanFields()
         })
     }
 

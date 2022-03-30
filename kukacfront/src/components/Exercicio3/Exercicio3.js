@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button, Input, Form, EnunciadoDiv } from "./styled"
 import useForm from "../../Hooks/useForm"
 import axios from "axios"
@@ -18,10 +18,12 @@ const Exercicio3 = () => {
 
     const [form, onChangeInput, cleanFields] = useForm(initialForm)
 
-    // axios.get("https://teste-kukac-trainee-back.herokuapp.com/challenge/veiculos/mostrar")
-    // .then(response => {
-    //     setResults(response.data)
-    // })
+    useEffect(()=> {
+        axios.get("https://teste-kukac-trainee-back.herokuapp.com/challenge/veiculos/mostrar")
+        .then(response => {
+            setResults(response.data)
+        })
+    }, [])
 
     const sendData = (event) => {
         event.preventDefault()
@@ -34,19 +36,23 @@ const Exercicio3 = () => {
             wheel
         }
 
-        axios.post("http://localhost:3003/challenge/veiculos/inserir", body)
+        axios.post("https://teste-kukac-trainee-back.herokuapp.com/challenge/veiculos/inserir", body)
         .then(res => {
             console.log(body)
             alert(`Veículo inserido na garagem com sucesso!`)
+            cleanFields()
+            axios.get("https://teste-kukac-trainee-back.herokuapp.com/challenge/veiculos/mostrar")
+            .then(response => {
+                setResults(response.data)
+                cleanFields()
+            })
         })
         .catch(error => {
-            console.log(error.message)
+            alert(error.response.data.message)
+            cleanFields()
         })
 
-        // axios.get("https://teste-kukac-trainee-back.herokuapp.com/challenge/veiculos/mostrar")
-        // .then(response => {
-        //     setResults(response.data)
-        // })
+
     }
 
     const allCars = 
