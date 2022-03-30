@@ -47,9 +47,8 @@ const Exercicio2 = () => {
             Exercício 2:
         </h3> 
         <p>
-        Escreva um algoritmo que mostre o número mínimo de notas qmodeue o caixa deve fornecer como troco.
-        Mostre também: o valor da compra, o valor do troco e a quantidade de cada tipo de nota do troco. Suponha que o sistema monetário não utilize moedas.
-        O valor da compra e o valor de dinheiro entregue ao caixa deve ser informado pelo usuário.
+        Escreva um algorítmo que mostre o usuário insira um valor de produto e outro de pagamento.
+        Será mostrado: o valor da compra, o valor do troco e a quantidade de cada tipo de nota do troco.
         </p>
         <Form onSubmit={sendData}>
             <Input 
