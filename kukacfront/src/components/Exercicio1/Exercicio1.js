@@ -4,7 +4,15 @@ import useForm from "../../Hooks/useForm"
 import { useState } from "react"
 
 const Exercicio1 = () => {
+
+    const initialForm = {
+        firstNumber: "",
+        secondNumber: ""
+    }
+
     const [results, setResults] = useState([])
+
+    const [form, onChangeInput, cleanFields] = useForm(initialForm)
 
     const sendData = (event) => {
         event.preventDefault()
@@ -24,18 +32,11 @@ const Exercicio1 = () => {
         })
     }
 
-    const initialForm = {
-        firstNumber: "",
-        secondNumber: ""
-    }
-
-    const [form, onChangeInput, cleanFields] = useForm(initialForm)
-
     const exerciseResult = 
-    results.map((result) => {
-        return (
-            <p>{result}</p>
-        )
+        results.map((result) => {
+            return (
+                <p>{result}</p>
+            )
     })
 
     return <EnunciadoDiv>

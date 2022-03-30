@@ -29,3 +29,22 @@ export const Button = styled.button`
     margin-left: 10px;
     cursor: pointer;
 `
+
+export const ResultDiv = styled.div`
+    display: flex;
+    justify-items: center;
+    margin-bottom: 15px;
+    align-items: center;
+
+    p {
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 18px;
+        margin-right: 10px;
+
+        p {
+            margin-right: 2px;
+            margin-left: 5px;
+        }
+    }
+`
