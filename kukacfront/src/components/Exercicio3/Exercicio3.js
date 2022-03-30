@@ -55,12 +55,13 @@ const Exercicio3 = () => {
 
     }
 
-    const allCars = 
-        results && results.map((car) => {
+    const allVehicles = 
+        results && results.map((vehicle) => {
             return (
             <GarageDiv>
-                <p>Modelo: {car.model}</p>
-                <p>Marca: {car.brand}</p>
+                <p>Modelo: {vehicle.model}</p>
+                <p>Marca: {vehicle.brand}</p>
+                <p>Ano: {vehicle.yearOfManufacture}</p>
             </GarageDiv>
             )
         })
@@ -116,7 +117,7 @@ const Exercicio3 = () => {
             Garagem:
         </h3>
         <ResultDiv>
-            {allCars}
+            {allVehicles}
         </ResultDiv>
         
     </EnunciadoDiv>
