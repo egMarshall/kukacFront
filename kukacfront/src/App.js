@@ -10,7 +10,7 @@ function App() {
       <Home/>
       <Exercicio1/>
       <Exercicio2/>
-      <Exercicio3/>
+      {/* <Exercicio3/> */}
       <Exercicio4/>
     </div>
   );

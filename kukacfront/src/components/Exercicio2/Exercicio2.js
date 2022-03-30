@@ -35,7 +35,7 @@ const Exercicio2 = () => {
     const allBills = results.bills
 
     const billCount = 
-        allBills.map((bill) => {
+        allBills && allBills.map((bill) => {
             return (
                 <p>{bill}</p>
             )
