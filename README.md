@@ -8,6 +8,11 @@ Foram utilizadas as biblitecas:
 - [Axios](https://github.com/axios/axios) - Axios é um cliente HTTP baseado em Promises para fazer requisições. Pode ser utilizado tanto no navegador quando no Node. js. É um projeto open source, disponível no Github
 
 
-# Link para o Deploy na Vercel da Aplicação: https://kukac-fullstack-trainee.vercel.app
+# Link para o Deploy na Vercel da Aplicação: 
 
-# Link para o repositório da parte de Back-End do teste: https://github.com/egMarshall/kukacBack
+## https://kukac-fullstack-trainee.vercel.app
+
+
+# Link para o repositório da parte de Back-End do teste: 
+
+## https://github.com/egMarshall/kukacBack
