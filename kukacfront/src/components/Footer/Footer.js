@@ -13,6 +13,7 @@ const Footer = () => {
                 target="blank">
                     <img 
                         src={github}
+                        alt="link para o github do Érico"
                     /> 
                 <p>Github</p>
             </a>
@@ -21,6 +22,7 @@ const Footer = () => {
                 target="blank">
                     <img 
                         src={linkedin}
+                        alt="link para o linkedin do Érico"
                     /> 
                 <p>Linkedin</p>
             </a>
@@ -28,7 +30,8 @@ const Footer = () => {
                 href="mailto:ericogmarshall1@gmail.com" 
                 target="blank">
                     <img 
-                        src={email} 
+                        src={email}
+                        alt="link para o email do Érico" 
                     /> 
                 <p>e-mail</p>
             </a>

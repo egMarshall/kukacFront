@@ -1,4 +1,4 @@
-import { Button, Input, Form, EnunciadoDiv, ResultDiv } from "./styled"
+import { Button, Input, Form, EnunciadoDiv, AddressDiv, ResultDiv } from "./styled"
 import useForm from "../../Hooks/useForm"
 import { useState } from "react"
 import axios from "axios"
@@ -43,13 +43,13 @@ const Exercicio4 = () => {
                 )
             } else {
                 return (
-                    <div>
+                    <AddressDiv>
                         <p>CEP: {address.cep}</p>
                         <p>Logradouro: {address.logradouro}</p>
                         <p>Bairro: {address.bairro}</p>
                         <p>Cidade: {address.localidade}</p>
-                        <p>Estado: {address.estado}</p>
-                    </div>
+                        <p>Estado: {address.uf}</p>
+                    </AddressDiv>
                 )
             }
             

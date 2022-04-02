@@ -40,17 +40,34 @@ export const Button = styled.button`
         background-color: lightgray;
     }
 `
-export const ResultDiv = styled.div`
+
+export const AddressDiv = styled.div`
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 300px;
+    max-width: fit-content;
+    min-height: 150px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+    p {
+        display: block;
+    }
+`
+
+export const ResultDiv = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     margin-bottom: 15px;
     align-items: center;
+    gap: 20px;
 
     p {
         display: flex;
         justify-content: space-evenly;
         font-size: 18px;
-        margin-right: 10px;
+        padding: 2px;
 
         p {
             margin-right: 2px;
